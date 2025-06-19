@@ -1,0 +1,261 @@
+.component {
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1920px;
+  height: 1080px;
+}
+
+.component .clip {
+  position: absolute;
+  top: 1068px;
+  left: 2016px;
+  width: 1920px;
+  height: 1080px;
+}
+
+.component .overlap-group {
+  width: 1920px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+  background-image: url(./img/group.png);
+  position: absolute;
+  background-size: 100% 100%;
+}
+
+.component .overlap {
+  width: 704px;
+  height: 54px;
+  top: 30px;
+  left: 425px;
+  background-image: url(./img/rectangle-60.svg);
+  position: absolute;
+  background-size: 100% 100%;
+}
+
+.component .search-icon-png {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 9px;
+  left: 19px;
+  object-fit: cover;
+}
+
+.component .group {
+  position: absolute;
+  width: 39px;
+  height: 29px;
+  top: 12px;
+  left: 647px;
+}
+
+.component .ongs-perto-de-mim {
+  position: absolute;
+  width: 312px;
+  height: 31px;
+  top: 13px;
+  left: 77px;
+}
+
+.component .element {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 164px;
+  left: 1637px;
+  object-fit: cover;
+}
+
+.component .agncia-SEO {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  top: 23px;
+  left: 50px;
+  object-fit: cover;
+}
+
+.component .simbolo-mais {
+  position: absolute;
+  width: 68px;
+  height: 68px;
+  top: 996px;
+  left: 926px;
+  background-image: url(./img/camada-1.png);
+  background-size: 100% 100%;
+}
+/* Original CSS code should be injected here */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #e86343;
+}
+
+.logo {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 27px;
+  padding: 10px 20px;
+  margin-left: 20px;
+  width: 704px;
+  height: 54px;
+}
+
+.search-icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.search-form input {
+  border: none;
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.search-submit {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-submit img {
+  width: 39px;
+  height: 29px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.auth-buttons {
+  margin-left: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-login {
+  color: #e86343;
+  background-color: #ffffff;
+}
+
+.btn-register {
+  color: #ffffff;
+  background-color: #333333;
+  margin-left: 10px;
+}
+
+.featured {
+  padding: 50px;
+}
+
+.featured h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.featured-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.main-item {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.main-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.organization {
+  color: #666666;
+  font-size: 14px;
+}
+
+.btn-help {
+  display: inline-block;
+  background-color: #e86343;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.add-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 68px;
+  height: 68px;
+  background-image: url(./img/camada-1.png);
+  background-size: cover;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.notifications {
+  position: fixed;
+  top: 164px;
+  right: 283px;
+}
+
+.notifications img {
+  width: 50px;
+  height: 50px;
+}

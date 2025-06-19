@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="configuracao.css" />
+    <title>User Settings</title>
+  </head>
+  <body>
+    <main class="box">
+      <section class="group">
+        <div class="overlap">
+          <header class="overlap-group">
+            <img class="mask-group" src="img/mask-group.png" alt="Header background" />
+            <h1 class="text-wrapper">Configurações</h1>
+          </header>
+          <nav>
+            <ul>
+              <li class="div-wrapper"><a href="#" class="text-wrapper-8">Conta</a></li>
+              <li><a href="#" class="text-wrapper-9">Privacidade</a></li>
+              <li><a href="#" class="text-wrapper-10">Mensagens</a></li>
+            </ul>
+          </nav>
+          <img class="line" src="img/line-4.svg" alt="Divider line" />
+          <form>
+            <div class="form-group">
+              <label for="username" class="div">Nome de usuário:</label>
+              <div class="overlap-2">
+                <input type="text" id="username" class="text-wrapper-5" value="João Silva" readonly />
+                <button type="button" class="edit-button">
+                  <img class="pencil" src="img/pencil-2.png" alt="Edit username" />
+                </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="text-wrapper-2">E-mail:</label>
+              <div class="overlap-3">
+                <input type="email" id="email" class="text-wrapper-6" value="joão.machado@gmail.com" readonly />
+                <button type="button" class="edit-button">
+                  <img class="img" src="img/pencil-3.png" alt="Edit email" />
+                </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="text-wrapper-3">Senha:</label>
+              <div class="overlap-4">
+                <input type="password" id="password" class="text-wrapper-7" value="**********" readonly />
+                <button type="button" class="edit-button">
+                  <img class="pencil" src="img/pencil-4.png" alt="Edit password" />
+                </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="confirm-password" class="text-wrapper-4">Confirmar senha:</label>
+              <input type="password" id="confirm-password" class="rectangle-2" />
+            </div>
+          </form>
+          <div class="overlap-group-wrapper">
+            <div class="overlap-group-2">
+              <img class="ellipse" src="img/ellipse-15.svg" alt="Profile picture background" />
+              <div class="ellipse-2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

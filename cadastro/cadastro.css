@@ -1,0 +1,384 @@
+.box {
+  width: 1920px;
+  height: 1080px;
+}
+
+.box .group {
+  position: fixed;
+  width: 1938px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+}
+
+.box .overlap {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background-image: url(./img/component-2.svg);
+  background-size: 100% 100%;
+}
+
+.box .text-wrapper {
+  position: absolute;
+  width: 313px;
+  top: 184px;
+  left: 803px;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #000000;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.box .nome {
+  position: absolute;
+  top: 329px;
+  left: 561px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: transparent;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.box .span {
+  color: #000000;
+}
+
+.box .text-wrapper-2 {
+  color: #dd2121;
+}
+
+.box .rectangle {
+  position: absolute;
+  width: 1920px;
+  height: 52px;
+  top: 99px;
+  left: 0;
+  background-color: #252525;
+}
+
+.box .div {
+  position: absolute;
+  width: 386px;
+  height: 50px;
+  top: 370px;
+  left: 544px;
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.box .e-mail {
+  position: absolute;
+  top: 449px;
+  left: 561px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: transparent;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.box .senha {
+  position: absolute;
+  top: 693px;
+  left: 561px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: transparent;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.box .overlap-group {
+  position: absolute;
+  width: 832px;
+  height: 50px;
+  top: 490px;
+  left: 544px;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.box .text-wrapper-3 {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-family: "Inter-Regular", Helvetica;
+  font-weight: 400;
+  color: #7f7f7f;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.box .text-wrapper-4 {
+  position: absolute;
+  top: 569px;
+  left: 561px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.box .div-wrapper {
+  position: absolute;
+  width: 832px;
+  height: 50px;
+  top: 610px;
+  left: 544px;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.box .rectangle-2 {
+  position: absolute;
+  width: 832px;
+  height: 50px;
+  top: 730px;
+  left: 544px;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.box .sobrenome {
+  position: absolute;
+  top: 329px;
+  left: 1007px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: transparent;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.box .rectangle-3 {
+  position: absolute;
+  width: 386px;
+  height: 50px;
+  top: 370px;
+  left: 990px;
+  border: 1px solid;
+  border-color: #000000;
+}
+
+.box .group-2 {
+  position: absolute;
+  width: 371px;
+  height: 31px;
+  top: 264px;
+  left: 776px;
+}
+
+.box .text-wrapper-5 {
+  position: absolute;
+  top: 0;
+  left: 46px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.box .group-wrapper {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  top: 0;
+  left: 0;
+  background-color: #222222;
+  border-radius: 15.5px;
+}
+
+.box .overlap-group-wrapper {
+  position: relative;
+  width: 21px;
+  height: 14px;
+  top: 9px;
+  left: 6px;
+}
+
+.box .overlap-group-2 {
+  position: relative;
+  width: 23px;
+  height: 18px;
+  top: -2px;
+  left: -2px;
+}
+
+.box .line {
+  position: absolute;
+  width: 9px;
+  height: 10px;
+  top: 9px;
+  left: 0;
+}
+
+.box .img {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 7px;
+}
+
+.box .text-wrapper-6 {
+  position: absolute;
+  top: 0;
+  left: 312px;
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  color: #000000;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.box .ellipse {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  top: 0;
+  left: 266px;
+  border-radius: 15.5px;
+  border: 1px solid;
+  border-color: #222222;
+}
+
+.box .line-2 {
+  position: absolute;
+  width: 1px;
+  height: 31px;
+  top: 0;
+  left: 231px;
+  object-fit: cover;
+}
+
+.box .overlap-2 {
+  position: absolute;
+  width: 234px;
+  height: 87px;
+  top: 836px;
+  left: 843px;
+  background-color: #1e1e1e;
+  border-radius: 19px;
+}
+
+.box .text-wrapper-7 {
+  position: absolute;
+  top: 24px;
+  left: 38px;
+  font-family: "Inter-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+/* Original CSS code should be injected here */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #000000;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+button[type="submit"] {
+  cursor: pointer;
+}
+
+.box .group-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box .group-2 div {
+  display: flex;
+  align-items: center;
+}
+
+.box .overlap-2:hover {
+  background-color: #333333;
+}
+
+.box .overlap-2:focus {
+  outline: 2px solid #4a90e2;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 100%;
+    height: auto;
+  }
+
+  .box .overlap {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .box .text-wrapper {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+
+  .box .div,
+  .box .overlap-group,
+  .box .div-wrapper,
+  .box .rectangle-2,
+  .box .rectangle-3 {
+    width: 100%;
+    left: 0;
+  }
+
+  .box .group-2 {
+    width: 100%;
+    left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .box .overlap-2 {
+    width: 100%;
+    left: 0;
+  }
+}

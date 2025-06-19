@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="cadastro.css" />
+    <title>Create Account</title>
+  </head>
+  <body>
+    <main class="box">
+      <section class="group">
+        <div class="overlap">
+          <h1 class="text-wrapper">Criar conta</h1>
+          <form>
+            <div class="form-group">
+              <label for="nome" class="nome">
+                <span class="span">Nome</span>
+                <span class="text-wrapper-2" aria-hidden="true">*</span>
+              </label>
+              <input type="text" id="nome" class="div" required aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="sobrenome" class="sobrenome">
+                <span class="span">Sobrenome</span>
+                <span class="text-wrapper-2" aria-hidden="true">*</span>
+              </label>
+              <input type="text" id="sobrenome" class="rectangle-3" required aria-required="true" />
+            </div>
+            <div class="form-group">
+              <label for="email" class="e-mail">
+                <span class="span">E-mail</span>
+                <span class="text-wrapper-2" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                class="overlap-group"
+                placeholder="emaildeexemplo@gmail.com"
+                required
+                aria-required="true"
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefone" class="text-wrapper-4">Telefone</label>
+              <input type="tel" id="telefone" class="div-wrapper" placeholder="+55 (00) 00000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="senha" class="senha">
+                <span class="span">Senha</span>
+                <span class="text-wrapper-2" aria-hidden="true">*</span>
+              </label>
+              <input type="password" id="senha" class="rectangle-2" required aria-required="true" />
+            </div>
+            <fieldset class="group-2">
+              <legend class="visually-hidden">Tipo de Conta</legend>
+              <div>
+                <input type="radio" id="pessoa-fisica" name="tipo-conta" value="pessoa-fisica" checked />
+                <label for="pessoa-fisica" class="text-wrapper-5">Pessoa Física</label>
+              </div>
+              <div>
+                <input type="radio" id="ong" name="tipo-conta" value="ong" />
+                <label for="ong" class="text-wrapper-6">ONG</label>
+              </div>
+            </fieldset>
+            <button type="submit" class="overlap-2">
+              <span class="text-wrapper-7">Cadastrar</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
