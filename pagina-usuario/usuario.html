@@ -1,76 +1,381 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="usuario.css" />
-    <title>User Profile</title>
-  </head>
-  <body>
-    <main class="box">
-      <section class="group">
-        <div class="overlap">
-          <header class="overlap-group">
-            <h1 class="text-wrapper">Mídia</h1>
-            <div class="media-grid">
-              <div class="overlap-group-2">
-                <div class="rectangle"></div>
-                <div class="rectangle-2"></div>
-                <div class="rectangle-3"></div>
-              </div>
-              <div class="rectangle-4"></div>
-            </div>
-            <div class="profile-header overlap-2">
-              <div class="rectangle-5"></div>
-              <div class="profile-picture">
-                <div class="ellipse"></div>
-                <div class="ellipse-2"></div>
-                <img class="img" src="img/ellipse-5.svg" alt="Profile background" />
-                <div class="ellipse-3"></div>
-              </div>
-              <button class="edit-profile">
-                <span class="text-wrapper-2">editar perfil</span>
-                <img class="pencil" src="img/pencil-1.png" alt="Edit icon" />
-              </button>
-              <button class="change-photo">
-                <div class="ellipse-4"></div>
-                <img class="camera" src="img/camera-1.png" alt="Camera icon" />
-              </button>
-              <img class="pencil-2" src="img/pencil-5.png" alt="Pencil icon" />
-            </div>
-            <h2 class="jo-o-silva-volunt">
-              <span class="span">João Silva</span><br />
-              <span class="text-wrapper-3">Voluntário</span>
-            </h2>
-          </header>
-          <div class="user-avatar overlap-3">
-            <div class="ellipse-5"></div>
-            <img class="ellipse-6" src="img/ellipse-10.svg" alt="User avatar background" />
-            <div class="ellipse-7"></div>
-          </div>
-          <form class="post-form overlap-4">
-            <div class="rectangle-6"></div>
-            <div class="rectangle-7"></div>
-            <textarea class="text-wrapper-4" placeholder="Faça sua postagem..."></textarea>
-            <div class="post-actions">
-              <button type="button">
-                <img class="share-link" src="img/share-link-1389029-1.png" alt="Share link" />
-              </button>
-              <button type="button">
-                <img class="focus" src="img/focus-4265710-1.png" alt="Focus" />
-              </button>
-              <button type="button">
-                <img class="connection" src="img/connection-13958330-1.png" alt="Connection" />
-              </button>
-              <div class="text-formatting">
-                <button type="button" class="bold">B</button>
-                <button type="button" class="underline">U</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-  </body>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil do Voluntário</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #fdf6f1;
+      color: #333;
+    }
+
+    header.navbar {
+      background-color: #c14428;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      color: #fff;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar input[type="search"] {
+      flex: 1;
+      margin: 0 16px;
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .navbar .menu-icon {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .profile-content {
+      display: flex;
+      gap: 32px;
+      padding: 32px;
+      flex-wrap: wrap;
+    }
+
+    .avatar-section {
+      flex: 1 1 300px;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+    }
+
+    .avatar-section img.profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #ccc;
+      border: 8px solid #fff;
+    }
+
+    .edit-photo {
+      position: absolute;
+      right: 90px;
+      top: 140px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 6px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+    }
+
+    .edit-photo img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .avatar-section p {
+      font-size: 24px;
+      margin-top: 12px;
+    }
+
+    .avatar-section span {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .edit-profile {
+      margin-top: 12px;
+      background-color: #c14428;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .post-section {
+      flex: 2;
+      max-width: 800px;
+      margin-top: 32px;
+    }
+
+    .post-section textarea {
+      width: 100%;
+      height: 150px;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: none;
+      margin-bottom: 16px;
+    }
+
+    .post-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .post-actions button {
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .post-actions img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .media-section {
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+
+    .media-section h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .media-box {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .media-box.more {
+      font-size: 36px;
+      font-weight: bold;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      flex-direction: column;
+    }
+
+    .modal-controls {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 90vw;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .modal-controls button {
+      background: rgba(255,255,255,0.7);
+      border: none;
+      font-size: 32px;
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .modal img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 8px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(255,255,255,0.7);
+      border: none;
+      font-size: 24px;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .profile-content {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">IMPACTA</div>
+    <input type="search" placeholder="Ongs perto de mim...">
+    <button class="menu-icon">☰</button>
+  </header>
+
+  <section class="profile-content">
+    <div class="avatar-section">
+      <img id="profilePic" src="../img/default-profile.jpg" alt="Foto de perfil" class="profile-pic">
+      <label for="fileInput" class="edit-photo" title="Trocar foto">
+        <img src="../img/camera.png" alt="Editar">
+      </label>
+      <input type="file" id="fileInput" accept="image/*" style="display: none">
+      <p>João Silva<br><span>Voluntário</span></p>
+      <button class="edit-profile">✏️ editar perfil</button>
+    </div>
+
+    <div class="post-section">
+      <textarea placeholder="Faça sua postagem..."></textarea>
+      <div class="post-actions">
+        <button><img src="../img/share-link.png" alt="Link"></button>
+        <button><img src="../img/focus.png" alt="Foco"></button>
+        <button><img src="../img/connection.png" alt="Conexão"></button>
+        <button><strong>B</strong></button>
+        <button><em>U</em></button>
+      </div>
+    </div>
+
+    <aside class="media-section">
+      <h2>Mídia</h2>
+      <input type="file" id="mediaUpload" multiple accept="image/*">
+      <div class="media-grid" id="mediaGrid"></div>
+    </aside>
+  </section>
+
+  <div class="modal" id="imageModal">
+    <button class="modal-close" onclick="closeModal()">X</button>
+    <div class="modal-controls">
+      <button onclick="prevImage()">⟨</button>
+      <button onclick="nextImage()">⟩</button>
+    </div>
+    <img id="modalImage" src="" alt="Zoom">
+  </div>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const profilePic = document.getElementById('profilePic');
+    const mediaUpload = document.getElementById('mediaUpload');
+    const mediaGrid = document.getElementById('mediaGrid');
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+
+    let currentIndex = 0;
+    let imageList = [];
+
+    fileInput.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          profilePic.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    mediaUpload.addEventListener('change', function () {
+      Array.from(this.files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const src = e.target.result;
+          imageList.push(src);
+          renderMediaGrid();
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+
+    function renderMediaGrid() {
+      mediaGrid.innerHTML = '';
+      const displayImages = imageList.slice(0, 3);
+
+      displayImages.forEach(src => {
+        const box = document.createElement('div');
+        box.className = 'media-box';
+        const img = document.createElement('img');
+        img.src = src;
+        img.addEventListener('click', () => openModal(src));
+        box.appendChild(img);
+        mediaGrid.appendChild(box);
+      });
+
+      if (imageList.length > 4) {
+        const moreBox = document.createElement('div');
+        moreBox.className = 'media-box more';
+        moreBox.innerText = '+';
+        moreBox.addEventListener('click', () => openModal(imageList[4]));
+        mediaGrid.appendChild(moreBox);
+      } else if (imageList.length >= 4) {
+        const fourthBox = document.createElement('div');
+        fourthBox.className = 'media-box';
+        const img = document.createElement('img');
+        img.src = imageList[3];
+        img.addEventListener('click', () => openModal(imageList[3]));
+        fourthBox.appendChild(img);
+        mediaGrid.appendChild(fourthBox);
+      }
+    }
+
+    function openModal(src) {
+      modalImage.src = src;
+      imageModal.style.display = 'flex';
+      currentIndex = imageList.indexOf(src);
+    }
+
+    function closeModal() {
+      imageModal.style.display = 'none';
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % imageList.length;
+      modalImage.src = imageList[currentIndex];
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
+      modalImage.src = imageList[currentIndex];
+    }
+  </script>
+</body>
 </html>

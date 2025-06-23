@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Postagem</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #fdf6f1;
+      color: #333;
+    }
+
+    header {
+      background-color: #c14428;
+      color: white;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    header nav a {
+      margin-left: 24px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .container {
+      padding: 32px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 150px;
+      resize: none;
+    }
+
+    .image-preview {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .image-box {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: white;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #imageInput {
+      margin-top: 10px;
+    }
+
+    .btn {
+      background-color: #c14428;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>IMPACTA</h1>
+    <nav>
+      <a href="#">Empresas</a>
+      <a href="#">Voluntários</a>
+      <a href="#">Sobre nós</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Criar Postagem</h2>
+    <div class="form-group">
+      <label for="titulo">Título da Postagem</label>
+      <input type="text" id="titulo" placeholder="Digite o título">
+    </div>
+
+    <div class="form-group">
+      <label for="descricao">Descrição</label>
+      <textarea id="descricao" placeholder="Digite a descrição..."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="imageInput">Adicionar Imagens</label>
+      <input type="file" id="imageInput" accept="image/*" multiple>
+      <div class="image-preview" id="previewContainer"></div>
+    </div>
+
+    <button class="btn" onclick="salvarPostagem()">Salvar</button>
+  </div>
+
+  <script>
+    const imageInput = document.getElementById('imageInput');
+    const previewContainer = document.getElementById('previewContainer');
+
+    imageInput.addEventListener('change', () => {
+      previewContainer.innerHTML = '';
+      const files = Array.from(imageInput.files);
+
+      files.slice(0, 4).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = e => {
+          const box = document.createElement('div');
+          box.className = 'image-box';
+          const img = document.createElement('img');
+          img.src = e.target.result;
+          box.appendChild(img);
+          previewContainer.appendChild(box);
+        };
+        reader.readAsDataURL(file);
+      });
+
+      if (files.length > 4) {
+        const extraBox = document.createElement('div');
+        extraBox.className = 'image-box';
+        extraBox.textContent = '+';
+        previewContainer.appendChild(extraBox);
+      }
+    });
+
+    function salvarPostagem() {
+      const titulo = document.getElementById('titulo').value;
+      const descricao = document.getElementById('descricao').value;
+      localStorage.setItem('postagem_titulo', titulo);
+      localStorage.setItem('postagem_descricao', descricao);
+      alert("Postagem salva! Redirecionando para visualização...");
+      window.location.href = "postagem.html";
+    }
+  </script>
+</body>
+</html>

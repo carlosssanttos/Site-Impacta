@@ -1,76 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="ongs.css" />
-    <title>Associação das Mãos Unidas ONG</title>
-  </head>
-  <body>
-    <main class="box">
-      <section class="group">
-        <div class="overlap">
-          <img class="component" src="img/component-7.svg" alt="Background component" />
-          <header class="rectangle"></header>
-          <div class="profile-section">
-            <div class="ellipse"></div>
-            <div class="div"></div>
-            <img class="img" src="img/ellipse-15.svg" alt="Profile decoration" />
-            <div class="ellipse-4"></div>
-            <div class="ellipse-6"></div>
-            <img class="camera" src="img/camera-2.png" alt="Camera icon" />
-          </div>
-          <div class="profile-info">
-            <h1 class="associa-o-das-m-os">
-              <span class="text-wrapper">Associação das Mãos Unidas<br /></span>
-              <span class="span">ONG</span>
-            </h1>
-            <div class="ellipse-2"></div>
-            <img class="ellipse-3" src="img/ellipse-16.svg" alt="Profile decoration" />
-            <div class="ellipse-5"></div>
-          </div>
-          <button class="edit-profile">
-            <span class="text-wrapper-2">editar perfil</span>
-            <img class="pencil" src="img/pencil-6.png" alt="Edit icon" />
-          </button>
-          <form class="post-form">
-            <textarea class="rectangle-3" placeholder="Faça sua postagem..."></textarea>
-            <div class="rectangle-2">
-              <button type="button" class="media-button">
-                <img class="share-link" src="img/share-link-1389029-2.png" alt="Share link" />
-              </button>
-              <button type="button" class="media-button">
-                <img class="focus" src="img/focus-4265710-2.png" alt="Focus" />
-              </button>
-              <button type="button" class="media-button">
-                <img class="connection" src="img/connection-13958330-2.png" alt="Connection" />
-              </button>
-              <div class="text-formatting">
-                <button type="button" class="format-button">B</button>
-                <button type="button" class="format-button format-italic">U</button>
-              </div>
-            </div>
-          </form>
-          <aside class="media-section">
-            <h2 class="text-wrapper-6">Mídia</h2>
-            <div class="group-2">
-              <div class="overlap-group">
-                <div class="rectangle-4"></div>
-                <div class="rectangle-5"></div>
-                <div class="rectangle-6"></div>
-              </div>
-              <div class="rectangle-7"></div>
-            </div>
-          </aside>
-          <img class="pencil-2" src="img/pencil-7.png" alt="Large pencil icon" />
-          <div class="overlap-wrapper">
-            <div class="vector-wrapper">
-              <img class="vector" src="img/vector.svg" alt="Vector graphic" />
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil do Voluntário</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #fdf6f1;
+      color: #333;
+    }
+
+    header.navbar {
+      background-color: #c14428;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 32px;
+      color: #fff;
+    }
+
+    .navbar .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .navbar input[type="search"] {
+      flex: 1;
+      margin: 0 16px;
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .navbar .menu-icon {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .profile-content {
+      display: flex;
+      gap: 32px;
+      padding: 32px;
+      flex-wrap: wrap;
+    }
+
+    .avatar-section {
+      flex: 1 1 300px;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
+    }
+
+    .avatar-section img.profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #ccc;
+      border: 8px solid #fff;
+    }
+
+    .edit-photo {
+      position: absolute;
+      right: 90px;
+      top: 140px;
+      background: #fff;
+      border-radius: 50%;
+      padding: 6px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+    }
+
+    .edit-photo img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .avatar-section p {
+      font-size: 24px;
+      margin-top: 12px;
+    }
+
+    .avatar-section span {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .edit-profile {
+      margin-top: 12px;
+      background-color: #c14428;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .post-section {
+      flex: 2;
+      max-width: 800px;
+    }
+
+    .post-section textarea {
+      width: 100%;
+      height: 150px;
+      padding: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: none;
+      margin-bottom: 16px;
+    }
+
+    .post-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .post-actions button {
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .post-actions img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .media-section {
+      flex: 1 1 300px;
+      max-width: 400px;
+    }
+
+    .media-section h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .media-box {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      background-color: #ccc;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .profile-content {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">IMPACTA</div>
+    <input type="search" placeholder="Ongs perto de mim...">
+    <button class="menu-icon">☰</button>
+  </header>
+
+  <section class="profile-content">
+    <div class="avatar-section">
+      <!-- Imagem padrão do usuário -->
+      <img id="profilePic" src="../img/default-profile.jpg" alt="Foto de perfil" class="profile-pic">
+
+      <!-- Botão com ícone de lápis -->
+      <label for="fileInput" class="edit-photo" title="Trocar foto">
+        <img src="../img/camera.png" alt="Editar">
+      </label>
+
+      <!-- Campo oculto para selecionar imagem -->
+      <input type="file" id="fileInput" accept="image/*" style="display: none">
+
+      <p>João Silva<br><span>Voluntário</span></p>
+      <button class="edit-profile">✏️ editar perfil</button>
+    </div>
+
+    <div class="post-section">
+      <textarea placeholder="Faça sua postagem..."></textarea>
+      <div class="post-actions">
+        <button><img src="../img/share-link.png" alt="Link"></button>
+        <button><img src="../img/focus.png" alt="Foco"></button>
+        <button><img src="../img/connection.png" alt="Conexão"></button>
+        <button><strong>B</strong></button>
+        <button><em>U</em></button>
+      </div>
+    </div>
+
+    <aside class="media-section">
+      <h2>Mídia</h2>
+      <div class="media-grid">
+        <div class="media-box"></div>
+        <div class="media-box"></div>
+        <div class="media-box"></div>
+        <div class="media-box"></div>
+      </div>
+    </aside>
+  </section>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const profilePic = document.getElementById('profilePic');
+
+    fileInput.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          profilePic.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
 </html>

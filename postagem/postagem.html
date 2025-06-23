@@ -1,64 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="postagem.css" />
-    <title>ONG Profile</title>
-  </head>
-  <body>
-    <main class="box">
-      <section class="group">
-        <div class="overlap-group">
-          <header class="overlap">
-            <h2 class="text-wrapper">EM DESTAQUE</h2>
-            <p class="location">Canoas - RS</p>
-            <div class="overlap-2">
-              <button class="text-wrapper-2">Cadastrar</button>
-              <p class="vivamus-at-diam">
-                Vivamus at diam neque. Vivamus consectetur nisi nisi,<br />et placerat quam&nbsp;&nbsp;efficitur a.
-                Nulla orci metus, venenatis<br />vel elit vitae, tincidunt&nbsp;&nbsp;tempor augue. Pellentesque
-                posuere<br />sit amet elit id finibus.
-              </p>
-              <nav>
-                <ul>
-                  <li class="active"><a href="#geral" class="text-wrapper-3">Geral</a></li>
-                  <li><a href="#info" class="text-wrapper-4">Info</a></li>
-                  <li><a href="#mapa" class="text-wrapper-5">Mapa</a></li>
-                </ul>
-              </nav>
-              <div class="rectangle-4" aria-hidden="true"></div>
-            </div>
-            <img class="rectangle-5" src="placeholder.jpg" alt="ONG Logo" />
-            <h1 class="text-wrapper-6">NOME DA ONG</h1>
-            <h3 class="text-wrapper-7">Fotos</h3>
-            <h4 class="text-wrapper-8">Título da postagem</h4>
-            <button class="cta-button"><span class="text-wrapper-9">INSCREVER-SE</span></button>
-            <div class="overlap-3" role="img" aria-label="Photo gallery">
-              <div class="gallery-grid">
-                <img src="placeholder1.jpg" alt="Gallery image 1" class="gallery-item" />
-                <img src="placeholder2.jpg" alt="Gallery image 2" class="gallery-item" />
-                <img src="placeholder3.jpg" alt="Gallery image 3" class="gallery-item" />
-                <img src="placeholder4.jpg" alt="Gallery image 4" class="gallery-item" />
-              </div>
-              <button class="add-photo" aria-label="Add photo">
-                <span class="text-wrapper-10">+</span>
-              </button>
-            </div>
-            <button class="more-options" aria-label="More options">
-              <span class="text-wrapper-11">...</span>
-            </button>
-            <button class="share-button" aria-label="Share">
-              <img class="pngimg-com-share" src="img/pngimg-com-share-png16-1.png" alt="Share icon" />
-            </button>
-          </header>
-          <img class="vector" src="img/image.svg" alt="Decorative vector" />
-          <img class="img" src="img/vector.svg" alt="Decorative vector" />
-          <img class="vector-2" src="img/vector-2.svg" alt="Decorative vector" />
-          <div class="rectangle-12" aria-hidden="true"></div>
-        </div>
-      </section>
-    </main>
-  </body>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visualização da Postagem</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    header.navbar {
+      background-color: #c14428;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+    }
+
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .navbar nav a {
+      margin-left: 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .content {
+      display: flex;
+      padding: 40px;
+      background-color: #fdf5ef;
+    }
+
+    .left-section {
+      flex: 1;
+    }
+
+    .right-section {
+      width: 400px;
+      margin-left: 40px;
+    }
+
+    .ong-info img {
+      width: 120px;
+      height: 120px;
+      background-color: #ccc;
+      border-radius: 8px;
+    }
+
+    .ong-name {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .ong-location {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .post-title {
+      margin-top: 30px;
+      font-size: 22px;
+    }
+
+    .post-description {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .subscribe-button {
+      background-color: #222;
+      color: white;
+      padding: 12px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .gallery-grid .more {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ccc;
+      font-size: 32px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .tabs {
+      margin-top: 40px;
+      background-color: #552a18;
+      display: flex;
+    }
+
+    .tabs button {
+      flex: 1;
+      padding: 16px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .tabs button.active {
+      background-color: white;
+      color: #552a18;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">IMPACTA</div>
+    <nav>
+      <a href="#">Empresas</a>
+      <a href="#">Voluntários</a>
+      <a href="#">Sobre nós</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <div class="left-section">
+      <div class="ong-info">
+        <img src="../img/default-profile.jpg" alt="Logo da ONG" />
+        <div class="ong-name">NOME DA ONG</div>
+        <div class="ong-location">Canoas - RS<br><small>EM DESTAQUE</small></div>
+      </div>
+
+      <div class="post-title">Título da postagem</div>
+      <div class="post-description">
+        Vivamus at diam neque. Vivamus consectetur nisi nisi, et placerat quam efficitur a.
+        Nulla orci metus, venenatis vel elit vitae, tincidunt tempor augue. Pellentesque posuere
+        sit amet elit id finibus.
+      </div>
+      <button class="subscribe-button">INSCREVER-SE</button>
+
+      <div class="tabs">
+        <button class="active">Geral</button>
+        <button>Info</button>
+        <button>Mapa</button>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <h3>Fotos</h3>
+      <div class="gallery-grid">
+        <img src="placeholder1.jpg" alt="Imagem 1" />
+        <img src="placeholder2.jpg" alt="Imagem 2" />
+        <img src="placeholder3.jpg" alt="Imagem 3" />
+        <div class="more">+</div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>
