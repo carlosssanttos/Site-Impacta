@@ -279,13 +279,20 @@
         senha.classList.add("erro");
         confirmar.classList.add("erro");
         e.preventDefault(); // Impede envio
-      } else {
+      }
+      else {
         erro.style.display = "none";
         senha.classList.remove("erro");
         confirmar.classList.remove("erro");
+
+        e.preventDefault(); // Impede envio normal
+
+        // Redireciona para a página do usuário
+        window.location.href = "../pagina-usuario/usuario.html";
       }
     });
   </script>
+
 
 </body>
 
