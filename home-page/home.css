@@ -184,6 +184,16 @@ header {
   color: white;
 }
 
+.btn.small1 {
+  background: #43a047;
+  color: white;
+}
+
+.btn.small2 {
+  background: #1e88e5;
+  color: white;
+}
+
 /* Estatísticas */
 .stats {
   display: flex;
