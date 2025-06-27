@@ -1,65 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="home.css" />
-    <title>Impacta - ONGs perto de mim</title>
-  </head>
-  <body>
-    <header class="header">
-      <img class="logo" src="img/ag-ncia-SEO-minimalista-logo-1-1.png" alt="Logo Impacta" />
-      <form class="search-form" role="search">
-        <img class="search-icon" src="img/search-icon-png-17-1.png" alt="Ícone de busca" />
-        <input type="search" placeholder="ONGs perto de mim..." aria-label="Buscar ONGs perto de mim" />
-        <button type="submit" class="search-submit">
-          <img src="img/group-4.png" alt="Enviar busca" />
-        </button>
-      </form>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#empresas">Empresas</a></li>
-          <li><a href="#voluntarios">Voluntários</a></li>
-          <li><a href="#sobre-nos">Sobre nós</a></li>
-        </ul>
-      </nav>
-      <div class="auth-buttons">
-        <a href="#entrar" class="btn btn-login">Entrar</a>
-        <a href="#cadastrar" class="btn btn-register">Cadastrar</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impacta</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="../img/logo.png" alt="Impacta" />
+        <span class="logo-text">Impacta</span>
       </div>
-    </header>
-    <main>
-      <section class="featured">
-        <h2>Em destaque</h2>
-        <div class="featured-grid">
-          <article class="featured-item main-item">
-            <img src="img/clip0-0-1.png" alt="Grupo de voluntários" />
-            <h3>Lorem ipsum</h3>
-            <p class="organization">ONG <time datetime="PT2H">2h</time></p>
-            <p class="description">Descrição</p>
-            <a href="#ajudar" class="btn btn-help">Ajudar</a>
-          </article>
-          <article class="featured-item">
-            <h3>Lorem ipsum</h3>
-            <p class="organization">ONG 2 <time datetime="PT14H">14h</time></p>
-          </article>
-          <article class="featured-item">
-            <h3>Lorem ipsum</h3>
-            <p class="organization">ONG 3 <time datetime="P1D">1d</time></p>
-          </article>
-          <article class="featured-item">
-            <h3>Lorem ipsum</h3>
-            <p class="organization">ONG 4 <time datetime="PT2H">2h</time></p>
-          </article>
-        </div>
-      </section>
-    </main>
-    <button class="add-button" aria-label="Adicionar novo item">
-      <span class="visually-hidden">Adicionar</span>
-    </button>
-    <div class="notifications" aria-live="polite">
-      <img src="img/565422-1.png" alt="Ícone de notificação" />
+      <ul class="nav-links">
+        <li><a href="#">Como Funciona</a></li>
+        <li><a href="#">ONGs</a></li>
+        <li><a href="#">Projetos</a></li>
+        <li><a href="#">Oportunidades</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+      <div class="auth-buttons">
+        <a href="#" class="login">Entrar</a>
+        <a href="#" class="register">Cadastrar</a>
+      </div>
     </div>
-  </body>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="../img/Frame 3.png" alt="Banner" class="hero-bg" />
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1><span class="highlight">Conectando</span> quem quer ajudar com quem precisa de ajuda</h1>
+        <p>Junte-se a milhares de ONGs, OSCs e voluntários que estão transformando realidades em todo o país.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn primary">
+            Sou uma ONG/OSC <i class="bi bi-building"></i>
+          </a>
+          <a href="#" class="btn secondary">
+            Quero ser voluntário <i class="bi bi-hand-heart"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estatísticas -->
+  <section class="stats">
+    <div class="stat-box">
+      <h3>0000</h3>
+      <p class="stat-title">ONGs/OSCs Cadastradas</p>
+    </div>
+    <div class="stat-box">
+      <h3>0000</h3>
+      <p class="stat-title">Voluntários ativos</p>
+    </div>
+    <div class="stat-box">
+      <h3>0000</h3>
+      <p class="stat-title">Projetos em andamento</p>
+    </div>
+    <div class="stat-box">
+      <h3>0000</h3>
+      <p class="stat-title">Cidades atendidas</p>
+    </div>
+  </section>
+
+  <!-- Como Funciona -->
+  <section class="como-funciona">
+    <h2>Como funciona o site</h2>
+    <p>Conectamos organizações sociais com pessoas dispostas a doar seu tempo e habilidades para causas importantes.</p>
+    <div class="steps">
+      <div class="step">
+        <img src="/imagens/passo1.png" alt="Passo 1">
+        <h3>1. Encontre oportunidades</h3>
+        <p>ONGs cadastram suas necessidades e voluntários encontram projetos que combinam com seus interesses e habilidades.</p>
+      </div>
+      <div class="step">
+        <img src="/imagens/passo2.png" alt="Passo 2">
+        <h3>2. Conecte-se</h3>
+        <p>Nossa plataforma facilita a conexão entre organizações e voluntários, com ferramentas de comunicação integradas.</p>
+      </div>
+      <div class="step">
+        <img src="/imagens/passo3.png" alt="Passo 3">
+        <h3>3. Faça a diferença</h3>
+        <p>Juntos, vocês podem criar um impacto social real e transformar vidas em sua comunidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como Ajudar -->
+  <section class="como-ajudar">
+    <div class="ongs-voluntarios">
+      <div class="card-col">
+        <h3>Para ONGs</h3>
+        <ol>
+          <li><strong>Cadastre sua ONG</strong><br> Crie seu perfil detalhando sua missão, causas atendidas e necessidades de voluntários.</li>
+          <li><strong>Publique oportunidades</strong><br> Divulgue vagas de voluntariado com descrições claras e requisitos específicos.</li>
+          <li><strong>Gerencie voluntários</strong><br> Receba inscrições, comunique-se com voluntários e acompanhe o progresso dos projetos.</li>
+        </ol>
+      </div>
+      <div class="card-col">
+        <h3>Para Voluntários</h3>
+        <ol>
+          <li><strong>Crie seu perfil</strong><br> Descreva suas habilidades, interesses e disponibilidade para voluntariado.</li>
+          <li><strong>Encontre oportunidades</strong><br> Busque por causas que combinem com você e inscreva-se em oportunidades de voluntariado.</li>
+          <li><strong>Faça a diferença</strong><br> Participe de atividades sociais, acompanhe seu impacto e construa uma rede de conexões significativas.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destaque -->
+  <section class="destaque">
+    <h2>Organizações em destaque</h2>
+    <p>Conheça algumas das organizações que estão fazendo a diferença com ajuda de voluntários.</p>
+    <div class="cards-ongs">
+      <div class="ong-card">
+        <img src="../img/Background (2).png" alt="SOS Amazônia">
+        <h4>SOS Amazônia</h4>
+        <p class="location">Manaus, AM</p>
+        <p class="desc">Preservação da Floresta Amazônica e combate ao desmatamento. Ajudamos comunidades tradicionais a...</p>
+        <div class="tags"><span>Meio Ambiente</span> <span>Comunidades</span></div>
+        <div class="buttons">
+          <a href="#" class="btn small">Ver detalhes</a>
+        </div>
+      </div>
+      <div class="ong-card">
+        <img src="../img/Background (1).png" alt="Combate à Fome">
+        <h4>Combate à Fome</h4>
+        <p class="location">Rio de Janeiro, RJ</p>
+        <p class="desc">Distribuição de alimentos, formação de hortas comunitárias e programas de segurança alimentar...</p>
+        <div class="tags"><span>Alimentação</span> <span>Educação</span></div>
+        <div class="buttons">
+          <a href="#" class="btn small">Quero ajudar</a>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn">Ver mais ONGs</a>
+  </section>
+
+  <!-- Depoimentos -->
+  <section class="depoimentos">
+    <h2>Depoimentos de voluntários</h2>
+    <div class="depoimentos-box">
+      <div class="depoimento">
+        <p><strong>Ana Silva</strong> - Voluntária há 2 anos</p>
+        <p>“Participar do projeto de alfabetização de adultos mudou minha perspectiva sobre educação. Ver o progresso dos alunos é incrivelmente gratificante!”</p>
+      </div>
+      <div class="depoimento">
+        <p><strong>Carlos Mendes</strong> - Voluntário há 1 ano</p>
+        <p>“Como engenheiro, pude ajudar uma ONG a melhorar suas instalações. A plataforma facilitou encontrar um projeto que combinava com minhas habilidades.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Pronto para fazer a diferença?</h2>
+    <p>Junte-se à nossa comunidade de organizações e voluntários que estão transformando o Brasil.</p>
+    <div class="cta-buttons">
+      <a href="#" class="btn secondary">Cadastre sua ONG</a>
+      <a href="#" class="btn primary">Quero ser voluntário</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Impacta</h4>
+        <p>Conectando organizações sociais com voluntários para criar impacto positivo.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Para ONGs</h4>
+        <ul>
+          <li><a href="#">Cadastrar minha ONG</a></li>
+          <li><a href="#">Publicar oportunidades</a></li>
+          <li><a href="#">Recursos para ONGs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Para Voluntários</h4>
+        <ul>
+          <li><a href="#">Buscar oportunidades</a></li>
+          <li><a href="#">Criar perfil</a></li>
+          <li><a href="#">Certificados e horas</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Fale Conosco</h4>
+        <p>contato@impacta.org<br>+55 11 3456-7890<br>São Paulo - SP, Brasil</p>
+      </div>
+    </div>
+    <p class="footer-bottom">
+      &copy; 2025 Impacta Plataforma de Voluntariado. Todos os direitos reservados.
+    </p>
+  </footer>
+</body>
 </html>
