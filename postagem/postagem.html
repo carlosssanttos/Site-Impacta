@@ -5,38 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Visualização da Postagem</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
+    }
+
+    body {
       background: #f5f5f5;
     }
 
-    header.navbar {
-      background-color: #c14428;
+    header {
+      background-color: #0077cc;
       color: white;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-left {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 20px 40px;
     }
 
-    .navbar .logo {
-      font-weight: bold;
-      font-size: 20px;
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+      object-fit: contain;
     }
 
-    .navbar nav a {
-      margin-left: 20px;
+    header h1 {
+      font-size: 24px;
+    }
+
+    header nav a {
+      margin-left: 24px;
       color: white;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .content {
       display: flex;
       padding: 40px;
       background-color: #fdf5ef;
+      max-width: 1000px;
+      margin: 32px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     .left-section {
@@ -53,6 +72,7 @@
       height: 120px;
       background-color: #ccc;
       border-radius: 8px;
+      object-fit: cover;
     }
 
     .ong-name {
@@ -64,16 +84,19 @@
     .ong-location {
       font-size: 14px;
       color: #666;
+      margin-top: 4px;
     }
 
     .post-title {
       margin-top: 30px;
       font-size: 22px;
+      font-weight: bold;
     }
 
     .post-description {
       font-size: 16px;
       margin-top: 10px;
+      line-height: 1.4;
     }
 
     .subscribe-button {
@@ -91,6 +114,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 8px;
+      margin-top: 20px;
     }
 
     .gallery-grid img {
@@ -109,12 +133,16 @@
       font-size: 32px;
       color: white;
       font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
     }
 
     .tabs {
       margin-top: 40px;
       background-color: #552a18;
       display: flex;
+      border-radius: 8px;
+      overflow: hidden;
     }
 
     .tabs button {
@@ -125,6 +153,7 @@
       color: white;
       font-size: 16px;
       cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .tabs button.active {
@@ -134,8 +163,11 @@
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">IMPACTA</div>
+  <header>
+    <div class="header-left">
+      <img src="../img/logo.png" alt="Logo" class="logo" />
+      <h1>IMPACTA</h1>
+    </div>
     <nav>
       <a href="#">Empresas</a>
       <a href="#">Voluntários</a>
@@ -152,18 +184,15 @@
       </div>
 
       <div class="post-title">Título da postagem</div>
-      <div class="post-description">
+      <div class="post-description" style="margin-bottom: 40px;">
         Vivamus at diam neque. Vivamus consectetur nisi nisi, et placerat quam efficitur a.
         Nulla orci metus, venenatis vel elit vitae, tincidunt tempor augue. Pellentesque posuere
         sit amet elit id finibus.
       </div>
+
+
       <button class="subscribe-button">INSCREVER-SE</button>
 
-      <div class="tabs">
-        <button class="active">Geral</button>
-        <button>Info</button>
-        <button>Mapa</button>
-      </div>
     </div>
 
     <div class="right-section">

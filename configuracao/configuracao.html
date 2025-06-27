@@ -1,69 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="configuracao.css" />
-    <title>User Settings</title>
-  </head>
-  <body>
-    <main class="box">
-      <section class="group">
-        <div class="overlap">
-          <header class="overlap-group">
-            <img class="mask-group" src="img/mask-group.png" alt="Header background" />
-            <h1 class="text-wrapper">Configurações</h1>
-          </header>
-          <nav>
-            <ul>
-              <li class="div-wrapper"><a href="#" class="text-wrapper-8">Conta</a></li>
-              <li><a href="#" class="text-wrapper-9">Privacidade</a></li>
-              <li><a href="#" class="text-wrapper-10">Mensagens</a></li>
-            </ul>
-          </nav>
-          <img class="line" src="img/line-4.svg" alt="Divider line" />
-          <form>
-            <div class="form-group">
-              <label for="username" class="div">Nome de usuário:</label>
-              <div class="overlap-2">
-                <input type="text" id="username" class="text-wrapper-5" value="João Silva" readonly />
-                <button type="button" class="edit-button">
-                  <img class="pencil" src="img/pencil-2.png" alt="Edit username" />
-                </button>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email" class="text-wrapper-2">E-mail:</label>
-              <div class="overlap-3">
-                <input type="email" id="email" class="text-wrapper-6" value="joão.machado@gmail.com" readonly />
-                <button type="button" class="edit-button">
-                  <img class="img" src="img/pencil-3.png" alt="Edit email" />
-                </button>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="password" class="text-wrapper-3">Senha:</label>
-              <div class="overlap-4">
-                <input type="password" id="password" class="text-wrapper-7" value="**********" readonly />
-                <button type="button" class="edit-button">
-                  <img class="pencil" src="img/pencil-4.png" alt="Edit password" />
-                </button>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="confirm-password" class="text-wrapper-4">Confirmar senha:</label>
-              <input type="password" id="confirm-password" class="rectangle-2" />
-            </div>
-          </form>
-          <div class="overlap-group-wrapper">
-            <div class="overlap-group-2">
-              <img class="ellipse" src="img/ellipse-15.svg" alt="Profile picture background" />
-              <div class="ellipse-2"></div>
-            </div>
-          </div>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configurações</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #f5f5f5;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    header nav a {
+      margin-left: 24px;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .form-container {
+      background: white;
+      padding: 24px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 32px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .field {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .field label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .field input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .profile-pic-container {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #ccc;
+      object-fit: cover;
+    }
+
+    .upload-btn {
+      font-size: 14px;
+      color: #0077cc;
+      cursor: pointer;
+      background: none;
+      border: none;
+      text-decoration: underline;
+    }
+
+    .btn-save {
+      background: #2d9c46;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      .form-row {
+        flex-direction: column;
+      }
+
+      .profile-pic-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-left">
+      <img src="../img/logo.png" alt="Logo" class="logo" />
+      <h1>IMPACTA</h1>
+    </div>
+    <nav>
+      <a href="#">Empresas</a>
+      <a href="#">Voluntários</a>
+      <a href="#">Sobre nós</a>
+    </nav>
+  </header>
+
+  <div class="form-container">
+    <h2 style="margin-bottom: 24px;">Configurações da Conta</h2>
+
+    <div class="profile-pic-container">
+      <img src="https://via.placeholder.com/100" alt="Foto de perfil" id="profilePreview" class="profile-pic" />
+      <div>
+        <label class="upload-btn" onclick="document.getElementById('profileInput').click()">Alterar foto</label>
+        <input type="file" id="profileInput" accept="image/*" class="hidden" />
+      </div>
+    </div>
+
+    <form id="configForm" onsubmit="return false;">
+      <div class="form-row">
+        <div class="field">
+          <label for="nome">Nome de usuário</label>
+          <input type="text" id="nome" value="João Silva" />
         </div>
-      </section>
-    </main>
-  </body>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" value="joao.machado@gmail.com" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="********" />
+        </div>
+        <div class="field">
+          <label for="confirmar">Confirmar senha</label>
+          <input type="password" id="confirmar" placeholder="********" />
+        </div>
+      </div>
+
+      <button class="btn-save" onclick="salvarConfiguracoes()">Salvar Alterações</button>
+    </form>
+  </div>
+
+  <script>
+    const profileInput = document.getElementById('profileInput');
+    const profilePreview = document.getElementById('profilePreview');
+
+    profileInput.addEventListener('change', function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          profilePreview.src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+      }
+    });
+
+    function salvarConfiguracoes() {
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+      const confirmar = document.getElementById('confirmar').value;
+
+      if (senha && senha !== confirmar) {
+        alert('As senhas não coincidem!');
+        return;
+      }
+
+      alert('Configurações salvas com sucesso!');
+    }
+  </script>
+
+</body>
+
 </html>

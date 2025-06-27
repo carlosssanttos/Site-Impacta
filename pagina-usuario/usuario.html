@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,12 +14,12 @@
     }
 
     body {
-      background-color: #fdf6f1;
+      background-color: #f5f5f5;
       color: #333;
     }
 
     header.navbar {
-      background-color: #c14428;
+      background-color: #0077cc;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -26,7 +27,18 @@
       color: #fff;
     }
 
-    .navbar .logo {
+    .header-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-left .logo-img {
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+    }
+
+    .header-left .logo-text {
       font-size: 24px;
       font-weight: bold;
     }
@@ -35,8 +47,9 @@
       flex: 1;
       margin: 0 16px;
       padding: 8px;
-      border-radius: 4px;
+      border-radius: 8px;
       border: none;
+      font-size: 16px;
     }
 
     .navbar .menu-icon {
@@ -103,7 +116,7 @@
 
     .edit-profile {
       margin-top: 12px;
-      background-color: #c14428;
+      background-color: #0077cc;
       color: #fff;
       padding: 8px 16px;
       border: none;
@@ -195,7 +208,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0, 0, 0, 0.8);
       align-items: center;
       justify-content: center;
       z-index: 9999;
@@ -213,7 +226,7 @@
     }
 
     .modal-controls button {
-      background: rgba(255,255,255,0.7);
+      background: rgba(255, 255, 255, 0.7);
       border: none;
       font-size: 32px;
       padding: 12px;
@@ -231,7 +244,7 @@
       position: absolute;
       top: 16px;
       right: 16px;
-      background: rgba(255,255,255,0.7);
+      background: rgba(255, 255, 255, 0.7);
       border: none;
       font-size: 24px;
       padding: 6px 12px;
@@ -247,9 +260,13 @@
     }
   </style>
 </head>
+
 <body>
   <header class="navbar">
-    <div class="logo">IMPACTA</div>
+    <div class="header-left">
+      <img src="../img/logo.png" alt="Logo" class="logo-img" />
+      <div class="logo-text">IMPACTA</div>
+    </div>
     <input type="search" placeholder="Ongs perto de mim...">
     <button class="menu-icon">☰</button>
   </header>
@@ -378,4 +395,5 @@
     }
   </script>
 </body>
+
 </html>
